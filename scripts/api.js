@@ -6,7 +6,7 @@
  * bahkan untuk update data dan delete data ke API
  */
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "http://188.166.181.154";
 
 export async function getQuestionById({ id = 10 }) {
   try {
@@ -18,6 +18,18 @@ export async function getQuestionById({ id = 10 }) {
     // });
     // const result = await response.json();
     // return result?.data;
+
+
+    const response = await fetch(`${BASE_URL}/api/quiz/${id}`, {
+      method: "GET",
+      headers: {
+        "Conten_Type": "application/json",
+      },
+    });
+
+    const result = await response.json();
+
+    return result?.data;
   } catch (error) {
     console.error("Error Nih: ", {
       error,

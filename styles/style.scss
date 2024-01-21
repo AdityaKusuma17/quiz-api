@@ -1,10 +1,10 @@
-@import 'variables';
-@import 'mixins';
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "variables";
+@import "mixins";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
@@ -205,6 +205,31 @@ body {
           font-size: 14px;
           font-weight: 600;
           color: $gray;
+        }
+
+        & .section-right {
+          gap: 12px;
+
+          & .btn {
+            border: none;
+            background: none;
+            padding: 8px 10px;
+            outline: none;
+            border-radius: 8px;
+            cursor: pointer;
+
+            & svg {
+              stroke: white;
+            }
+          }
+
+          & .btn-edit {
+            background: rgb(177, 124, 0);
+          }
+
+          & .btn-delete {
+            background: red;
+          }
         }
       }
     }

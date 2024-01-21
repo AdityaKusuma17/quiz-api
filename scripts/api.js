@@ -10,23 +10,12 @@ const BASE_URL = "http://188.166.181.154";
 
 export async function getQuestionById({ id = 10 }) {
   try {
-    // const response = await fetch(`${BASE_URL}/api/quiz/${id}`, {
-    //   method: "GET",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // });
-    // const result = await response.json();
-    // return result?.data;
-
-
     const response = await fetch(`${BASE_URL}/api/quiz/${id}`, {
       method: "GET",
       headers: {
-        "Conten_Type": "application/json",
+        "Content-Type": "application/json",
       },
     });
-
     const result = await response.json();
 
     return result?.data;
@@ -45,6 +34,7 @@ export async function getQuestions() {
     //     "Content-Type": "application/json",
     //   },
     // });
+
     // const result = await response.json();
     // return result?.data;
   } catch (error) {
